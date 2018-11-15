@@ -68,6 +68,8 @@
     Private Sub ClientesGrid_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         ClientesCollectionBindingSource.DataSource = Clienteslist.TraerCliente
+        'Debe llenarse la provinciasList para mostrar la columna nombre de la provincia en la grilla.
+        ProvinciasList.TraerProvincia()
 
         'Si la cantidad de filas es mayor a cero, entonces selecciono la primer fila.
         If DataGridView1.Rows.Count > 0 Then
