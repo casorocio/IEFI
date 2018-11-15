@@ -33,10 +33,12 @@
     Private Sub Aceptar_Click(sender As Object, e As EventArgs) Handles Aceptar.Click
 
         If operacion_ <> "Insertar" Then
-            MiCliente.Id = CInt(Id.text)
+            MiCliente.Id = CInt(Id.Text)
         End If
 
-        MiCliente.Nombre = Nombre.text
+        MiCliente.Nombre = Nombre.Text
+        'Faltó setear la propiedad IdProvincia
+        MiCliente.IdProvincia = Provinciacombo.SelectedValue
 
         Select Case operacion_
 
@@ -65,7 +67,12 @@
 
         'El miembro de valor es siempre el id.
         Provinciacombo.ValueMember = "Id"
-        'El valor seleccionado del combo es combo que contiene el idcarrera
-        Provinciacombo.SelectedValue = Provinciacombo
+        'Falto el miebro o columna a mostrar en el combo.
+        Provinciacombo.DisplayMember = "Provincia"
+
+        'El valor seleccionado del combo es combo que contiene el IdProvincia
+        'Provinciacombo.SelectedValue = Provinciacombo para esto es la propiedad IdProvincia del ClienteForm.
+        Provinciacombo.SelectedValue = IdProvincia_
+
     End Sub
 End Class

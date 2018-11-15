@@ -7,7 +7,7 @@ Public Class BaseDatosClass
 
     'Inicializamos el string de la cadena de conexión.
 
-    Dim CadenaConexion As String = "Data Source=.\SQLEXPRESS; DataBase=IEFI; User=sa; Password=carena"
+    Dim CadenaConexion As String = "Data Source=.\SQLEXPRESS; DataBase=iefi; User=sa; Password=carena"
 
     'Instaciamos un objeto SqlConnection pasando como parámetro la cadena
     Dim objConexion As New SqlConnection(CadenaConexion)

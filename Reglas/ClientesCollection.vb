@@ -38,7 +38,7 @@ Public Class ClientesCollection
         Dim MiDataTable As New DataTable
         Dim MiCliente As ClienteClass
 
-        ObjBaseDatos.objTabla = "Cliente"
+        ObjBaseDatos.objTabla = "Clientes"
         MiDataTable = ObjBaseDatos.TraerTodo
 
         For Each dr As DataRow In MiDataTable.Rows
@@ -46,7 +46,7 @@ Public Class ClientesCollection
 
             MiCliente.Id = CInt(dr("Id"))
             MiCliente.Nombre = dr("Nombre")
-            MiCliente.IdProvincia = CInt("IdProvincia")
+            MiCliente.IdProvincia = CInt(dr("IdProvincia"))
 
             Me.Add(MiCliente)
         Next

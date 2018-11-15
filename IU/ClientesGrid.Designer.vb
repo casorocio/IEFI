@@ -33,10 +33,10 @@ Partial Class ClientesGrid
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.Salir = New System.Windows.Forms.ToolStripButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ClientesCollectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdProvinciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClientesCollectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesCollectionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,10 +117,6 @@ Partial Class ClientesGrid
         Me.DataGridView1.Size = New System.Drawing.Size(859, 443)
         Me.DataGridView1.TabIndex = 1
         '
-        'ClientesCollectionBindingSource
-        '
-        Me.ClientesCollectionBindingSource.DataSource = GetType(iefi.ClientesCollection)
-        '
         'IdDataGridViewTextBoxColumn
         '
         Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
@@ -138,6 +134,10 @@ Partial Class ClientesGrid
         Me.IdProvinciaDataGridViewTextBoxColumn.DataPropertyName = "IdProvincia"
         Me.IdProvinciaDataGridViewTextBoxColumn.HeaderText = "IdProvincia"
         Me.IdProvinciaDataGridViewTextBoxColumn.Name = "IdProvinciaDataGridViewTextBoxColumn"
+        '
+        'ClientesCollectionBindingSource
+        '
+        Me.ClientesCollectionBindingSource.DataSource = GetType(iefi.ClientesCollection)
         '
         'ClientesGrid
         '

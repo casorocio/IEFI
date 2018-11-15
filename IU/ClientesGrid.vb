@@ -1,6 +1,6 @@
 ﻿Public Class ClientesGrid
 
-    Dim MiCliente As New ClienteClass
+    'Dim MiCliente As New ClienteClass
 
     Private Sub llenarform()
 
@@ -9,6 +9,8 @@
 
         ClienteForm.Id.Text = Clienteslist.Item(fila).Id
         ClienteForm.Nombre.Text = Clienteslist.Item(fila).Nombre
+        'Falto asignar el IdProvincia de la lista para poder seleeccionarlo el combo.
+        ClienteForm.IdProvincia = Clienteslist.Item(fila).IdProvincia
 
 
     End Sub
@@ -63,7 +65,7 @@
 
     End Sub
 
-    Private Sub ClientesGrid_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ClientesGrid_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         ClientesCollectionBindingSource.DataSource = Clienteslist.TraerCliente
 

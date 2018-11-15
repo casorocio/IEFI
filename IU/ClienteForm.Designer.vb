@@ -64,12 +64,12 @@ Partial Class ClienteForm
         Me.Provinciacombo.FormattingEnabled = True
         Me.Provinciacombo.Location = New System.Drawing.Point(142, 122)
         Me.Provinciacombo.Name = "Provinciacombo"
-        Me.Provinciacombo.Size = New System.Drawing.Size(121, 21)
+        Me.Provinciacombo.Size = New System.Drawing.Size(269, 21)
         Me.Provinciacombo.TabIndex = 3
         '
         'Id
         '
-        Me.Id.Location = New System.Drawing.Point(163, 28)
+        Me.Id.Location = New System.Drawing.Point(142, 28)
         Me.Id.Name = "Id"
         Me.Id.ReadOnly = True
         Me.Id.Size = New System.Drawing.Size(100, 20)
@@ -77,14 +77,14 @@ Partial Class ClienteForm
         '
         'Nombre
         '
-        Me.Nombre.Location = New System.Drawing.Point(163, 80)
+        Me.Nombre.Location = New System.Drawing.Point(142, 80)
         Me.Nombre.Name = "Nombre"
-        Me.Nombre.Size = New System.Drawing.Size(100, 20)
+        Me.Nombre.Size = New System.Drawing.Size(269, 20)
         Me.Nombre.TabIndex = 5
         '
         'Aceptar
         '
-        Me.Aceptar.Location = New System.Drawing.Point(52, 227)
+        Me.Aceptar.Location = New System.Drawing.Point(240, 165)
         Me.Aceptar.Name = "Aceptar"
         Me.Aceptar.Size = New System.Drawing.Size(75, 23)
         Me.Aceptar.TabIndex = 6
@@ -93,7 +93,7 @@ Partial Class ClienteForm
         '
         'Salir
         '
-        Me.Salir.Location = New System.Drawing.Point(188, 227)
+        Me.Salir.Location = New System.Drawing.Point(336, 165)
         Me.Salir.Name = "Salir"
         Me.Salir.Size = New System.Drawing.Size(75, 23)
         Me.Salir.TabIndex = 7
@@ -104,7 +104,7 @@ Partial Class ClienteForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.ClientSize = New System.Drawing.Size(432, 208)
         Me.Controls.Add(Me.Salir)
         Me.Controls.Add(Me.Aceptar)
         Me.Controls.Add(Me.Nombre)

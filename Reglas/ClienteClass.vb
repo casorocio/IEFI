@@ -32,4 +32,19 @@
         End Set
     End Property
 
+    Dim nomprovincia_ As String
+    Public ReadOnly Property nomprovincia()
+        Get
+            'Busca el id que corresponde a IdProvincia y cuando lo encuentra retorna la columna provincia con la columna del nombre(Provincia)
+            For Each provinci As ProvinciaClass In ProvinciasList
+                If provinci.Id = IdProvincia_ Then
+                    nomprovincia_ = provinci.Provincia
+                    Exit For
+                End If
+            Next
+
+            Return nomprovincia_
+        End Get
+    End Property
+
 End Class
