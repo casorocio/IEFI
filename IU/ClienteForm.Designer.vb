@@ -30,6 +30,10 @@ Partial Class ClienteForm
         Me.Nombre = New System.Windows.Forms.TextBox()
         Me.Aceptar = New System.Windows.Forms.Button()
         Me.Salir = New System.Windows.Forms.Button()
+        Me.Fecha = New System.Windows.Forms.Label()
+        Me.Saldo = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.SaldoTextBox = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -44,7 +48,7 @@ Partial Class ClienteForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(27, 83)
+        Me.Label2.Location = New System.Drawing.Point(22, 68)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 1
@@ -53,7 +57,7 @@ Partial Class ClienteForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(27, 125)
+        Me.Label3.Location = New System.Drawing.Point(27, 105)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(60, 13)
         Me.Label3.TabIndex = 2
@@ -62,7 +66,7 @@ Partial Class ClienteForm
         'Provinciacombo
         '
         Me.Provinciacombo.FormattingEnabled = True
-        Me.Provinciacombo.Location = New System.Drawing.Point(142, 122)
+        Me.Provinciacombo.Location = New System.Drawing.Point(142, 105)
         Me.Provinciacombo.Name = "Provinciacombo"
         Me.Provinciacombo.Size = New System.Drawing.Size(269, 21)
         Me.Provinciacombo.TabIndex = 3
@@ -77,14 +81,14 @@ Partial Class ClienteForm
         '
         'Nombre
         '
-        Me.Nombre.Location = New System.Drawing.Point(142, 80)
+        Me.Nombre.Location = New System.Drawing.Point(142, 68)
         Me.Nombre.Name = "Nombre"
         Me.Nombre.Size = New System.Drawing.Size(269, 20)
         Me.Nombre.TabIndex = 5
         '
         'Aceptar
         '
-        Me.Aceptar.Location = New System.Drawing.Point(240, 165)
+        Me.Aceptar.Location = New System.Drawing.Point(241, 222)
         Me.Aceptar.Name = "Aceptar"
         Me.Aceptar.Size = New System.Drawing.Size(75, 23)
         Me.Aceptar.TabIndex = 6
@@ -93,18 +97,54 @@ Partial Class ClienteForm
         '
         'Salir
         '
-        Me.Salir.Location = New System.Drawing.Point(336, 165)
+        Me.Salir.Location = New System.Drawing.Point(336, 222)
         Me.Salir.Name = "Salir"
         Me.Salir.Size = New System.Drawing.Size(75, 23)
         Me.Salir.TabIndex = 7
         Me.Salir.Text = "Salir"
         Me.Salir.UseVisualStyleBackColor = True
         '
+        'Fecha
+        '
+        Me.Fecha.AutoSize = True
+        Me.Fecha.Location = New System.Drawing.Point(27, 148)
+        Me.Fecha.Name = "Fecha"
+        Me.Fecha.Size = New System.Drawing.Size(37, 13)
+        Me.Fecha.TabIndex = 8
+        Me.Fecha.Text = "Fecha"
+        '
+        'Saldo
+        '
+        Me.Saldo.AutoSize = True
+        Me.Saldo.Location = New System.Drawing.Point(27, 182)
+        Me.Saldo.Name = "Saldo"
+        Me.Saldo.Size = New System.Drawing.Size(34, 13)
+        Me.Saldo.TabIndex = 9
+        Me.Saldo.Text = "Saldo"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(299, 145)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 10
+        '
+        'SaldoTextBox
+        '
+        Me.SaldoTextBox.Location = New System.Drawing.Point(299, 175)
+        Me.SaldoTextBox.Name = "SaldoTextBox"
+        Me.SaldoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.SaldoTextBox.TabIndex = 11
+        '
         'ClienteForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(432, 208)
+        Me.ClientSize = New System.Drawing.Size(432, 257)
+        Me.Controls.Add(Me.SaldoTextBox)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Saldo)
+        Me.Controls.Add(Me.Fecha)
         Me.Controls.Add(Me.Salir)
         Me.Controls.Add(Me.Aceptar)
         Me.Controls.Add(Me.Nombre)
@@ -131,4 +171,8 @@ Partial Class ClienteForm
     Friend WithEvents Nombre As TextBox
     Friend WithEvents Aceptar As Button
     Friend WithEvents Salir As Button
+    Friend WithEvents Fecha As Label
+    Friend WithEvents Saldo As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents SaldoTextBox As TextBox
 End Class

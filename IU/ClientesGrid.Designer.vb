@@ -33,11 +33,13 @@ Partial Class ClientesGrid
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.Salir = New System.Windows.Forms.ToolStripButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ClientesCollectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SaldoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdProvinciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nomprovincia = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NomprovinciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClientesCollectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesCollectionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,18 +111,30 @@ Partial Class ClientesGrid
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.IdProvinciaDataGridViewTextBoxColumn, Me.nomprovincia})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SaldoDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.IdProvinciaDataGridViewTextBoxColumn, Me.NomprovinciaDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ClientesCollectionBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(5, 33)
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 31)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(859, 443)
+        Me.DataGridView1.Size = New System.Drawing.Size(865, 406)
         Me.DataGridView1.TabIndex = 1
         '
-        'ClientesCollectionBindingSource
+        'SaldoDataGridViewTextBoxColumn
         '
-        Me.ClientesCollectionBindingSource.DataSource = GetType(iefi.ClientesCollection)
+        Me.SaldoDataGridViewTextBoxColumn.DataPropertyName = "Saldo"
+        Me.SaldoDataGridViewTextBoxColumn.HeaderText = "Saldo"
+        Me.SaldoDataGridViewTextBoxColumn.Name = "SaldoDataGridViewTextBoxColumn"
+        '
+        'FechaDataGridViewTextBoxColumn
+        '
+        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha"
+        Me.FechaDataGridViewTextBoxColumn.HeaderText = "Fecha"
+        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
         '
         'IdDataGridViewTextBoxColumn
         '
@@ -140,12 +154,16 @@ Partial Class ClientesGrid
         Me.IdProvinciaDataGridViewTextBoxColumn.HeaderText = "IdProvincia"
         Me.IdProvinciaDataGridViewTextBoxColumn.Name = "IdProvinciaDataGridViewTextBoxColumn"
         '
-        'nomprovincia
+        'NomprovinciaDataGridViewTextBoxColumn
         '
-        Me.nomprovincia.DataPropertyName = "nomprovincia"
-        Me.nomprovincia.HeaderText = "nomprovincia"
-        Me.nomprovincia.Name = "nomprovincia"
-        Me.nomprovincia.ReadOnly = True
+        Me.NomprovinciaDataGridViewTextBoxColumn.DataPropertyName = "nomprovincia"
+        Me.NomprovinciaDataGridViewTextBoxColumn.HeaderText = "nomprovincia"
+        Me.NomprovinciaDataGridViewTextBoxColumn.Name = "NomprovinciaDataGridViewTextBoxColumn"
+        Me.NomprovinciaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ClientesCollectionBindingSource
+        '
+        Me.ClientesCollectionBindingSource.DataSource = GetType(iefi.ClientesCollection)
         '
         'ClientesGrid
         '
@@ -174,9 +192,11 @@ Partial Class ClientesGrid
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents Salir As ToolStripButton
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents ClientesCollectionBindingSource As BindingSource
+    Friend WithEvents SaldoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdProvinciaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents nomprovincia As DataGridViewTextBoxColumn
+    Friend WithEvents NomprovinciaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ClientesCollectionBindingSource As BindingSource
 End Class

@@ -76,4 +76,8 @@
             DataGridView1.Rows(0).Selected = True
         End If
     End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
 End Class

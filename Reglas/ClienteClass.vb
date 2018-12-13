@@ -3,8 +3,24 @@
 
     Dim Id_, IdProvincia_ As Integer
     Dim Nombre_ As String
-
-
+    Dim Saldo_ As Decimal
+    Dim Fecha_ As Date
+    Public Property Saldo() As Decimal
+        Get
+            Return Saldo_
+        End Get
+        Set(value As Decimal)
+            Saldo_ = value
+        End Set
+    End Property
+    Public Property Fecha() As Date
+        Get
+            Return Fecha_
+        End Get
+        Set(value As Date)
+            Fecha_ = value
+        End Set
+    End Property
     Public Property Id() As Integer
         Get
             Return Id_

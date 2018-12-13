@@ -75,4 +75,41 @@
         Provinciacombo.SelectedValue = IdProvincia_
 
     End Sub
+
+    Private Sub Nombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Nombre.KeyPress
+
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+
+        End If
+
+        Me.Nombre.Text = Trim(Replace(Me.Nombre.Text, " ", ""))
+        Nombre.Select(Nombre.Text.Length, 0)
+
+    End Sub
+
+    Private Sub SaldoTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SaldoTextBox.KeyPress
+
+        If Char.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSymbol(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsWhiteSpace(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+
+        Me.SaldoTextBox.Text = Trim(Replace(Me.SaldoTextBox.Text, "  ", " "))
+        SaldoTextBox.Select(SaldoTextBox.Text.Length, 0)
+        Exit Sub
+    End Sub
 End Class
